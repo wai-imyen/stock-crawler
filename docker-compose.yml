@@ -1,0 +1,12 @@
+services:
+  app:
+    build: .
+    container_name: app
+    volumes:
+      - ./app:/app
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
